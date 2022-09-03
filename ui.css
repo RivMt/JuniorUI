@@ -1,0 +1,74 @@
+/** Global variables **/
+:root {
+    --primary-color-hs: 265, 100%;
+    --accent-color: lime;
+    --background-color-hs: 265, 10%;
+    --white-color: #FFFFFF;
+    --shadow-color: #00000044;
+}
+
+/** Global Styles **/
+body {
+    /** Fonts **/
+    font-family: 'Noto Sans', 'Noto Sans JP', 'Noto Sans KR', sans-serif;
+}
+
+/** Buttons **/
+button {
+    /** Remove default styles **/
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    /** Layout **/
+    display: inline-block;
+    padding: 0.6rem;
+    margin: 0.1em;
+    min-height: 1rem;
+    border: 0rem;
+    border-radius: 0%;
+    /** Fonts **/
+    font-family: inherit;
+    font-weight: 500;
+}
+button:focus {
+    /** Outline **/
+    outline: 0.2rem solid hsla(var(--primary-color-hs), 47%, 50%);
+}
+button.contained {
+    /** Container **/
+    background-color: hsl(var(--primary-color-hs), 47%);
+    color: var(--white-color);
+}
+button.contained:hover {
+    /** Overlay Shadow **/
+    background-color: hsl(var(--primary-color-hs), 35%);
+}
+button.contained:active {
+    /** Overlay Shadow **/
+    background-color: hsl(var(--primary-color-hs), 20%);
+}button.outlined {
+    /** Border **/
+    box-shadow: inset 0 0 0 0.1rem hsl(var(--primary-color-hs), 47%);
+    /** Remove background **/
+    background-color: hsla(var(--primary-color-hs), 47%, 0%);
+}
+button.outlined:hover {
+    /** Overlay Shadow **/
+    background-color: hsla(var(--primary-color-hs), 47%, 50%);
+}
+button.outlined:active {
+    /** Overlay Shadow **/
+    background-color: hsla(var(--primary-color-hs), 47%, 70%);
+}
+button.flat {
+    /** Overlay Shadow **/
+    background-color: hsl(var(--background-color-hs), 90%);
+}
+button.flat:hover {
+    /** Overlay Shadow **/
+    background-color: hsl(var(--background-color-hs), 80%);
+}
+button.flat:active {
+    /** Overlay Shadow **/
+    background-color: hsl(var(--background-color-hs), 50%);
+}
