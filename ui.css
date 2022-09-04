@@ -221,3 +221,7 @@ input[type="checkbox"]:disabled+span {
     outline: none;
     border: max(2px, 0.15em) solid hsl(var(--primary-color-hs), var(--primary-color-base));
 }
+.inputfield:disabled {
+    outline: none;
+    border: max(2px, 0.15em) solid hsl(var(--achromatic-color-hs), var(--achromatic-color-light));
+}
