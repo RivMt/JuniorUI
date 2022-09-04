@@ -57,12 +57,17 @@ button.contained {
     color: var(--white-color);
 }
 
-button.contained:hover {
+button.contained:disabled {
+    /** Container **/
+    background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
+}
+
+button.contained:hover:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsl(var(--primary-color-hs), var(--primary-color-light));
 }
 
-button.contained:active {
+button.contained:active:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsl(var(--primary-color-hs), var(--primary-color-dark));
 }
@@ -70,16 +75,23 @@ button.contained:active {
 button.outlined {
     /** Border **/
     box-shadow: inset 0 0 0 0.1rem hsl(var(--primary-color-hs), var(--primary-color-base));
+    color: hsl(var(--primary-color-hs), var(--primary-color-base));
     /** Remove background **/
     background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-none));
 }
 
-button.outlined:hover {
+button.outlined:disabled {
+    /** Border **/
+    box-shadow: inset 0 0 0 0.1rem hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
+    color: hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
+}
+
+button.outlined:hover:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-base));
 }
 
-button.outlined:active {
+button.outlined:active:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-light));
 }
@@ -89,12 +101,17 @@ button.flat {
     background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-light));
 }
 
-button.flat:hover {
+button.flat:disabled {
+    /** Overlay Shadow **/
+    background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-lighter));
+}
+
+button.flat:hover:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
 }
 
-button.flat:active {
+button.flat:active:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-dark));
 }
