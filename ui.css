@@ -1,10 +1,25 @@
 /** Global variables **/
 :root {
+    /** Colors **/
     --primary-color-hs: 265, 100%;
-    --accent-color: lime;
-    --background-color-hs: 265, 10%;
+    --primary-color-base: 47%;
+    --primary-color-light: 62%;
+    --primary-color-dark: 32%;
+    --accent-color-hs: 120, 100%;
+    --accent-color-base: 50%;
+    --accent-color-light: 65%;
+    --accent-color-dark: 35%;
+    --achromatic-color-hs: 265, 3%;
+    --achromatic-color-lighter: 90%;
+    --achromatic-color-light: 70%;
+    --achromatic-color-base: 50%;
+    --achromatic-color-dark: 30%;
+    --achromatic-color-darker: 10%;
+    --transparent-base: 50%;
+    --transparent-light: 70%;
+    --transparent-dark: 30%;
+    --transparent-none: 0%;
     --white-color: #FFFFFF;
-    --shadow-color: #00000044;
 }
 
 /** Global Styles **/
@@ -30,45 +45,101 @@ button {
     font-family: inherit;
     font-weight: 500;
 }
+
 button:focus {
     /** Outline **/
-    outline: 0.2rem solid hsla(var(--primary-color-hs), 47%, 50%);
+    outline: 0.2rem solid hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-base));
 }
+
 button.contained {
     /** Container **/
-    background-color: hsl(var(--primary-color-hs), 47%);
+    background-color: hsl(var(--primary-color-hs), var(--primary-color-base));
     color: var(--white-color);
 }
+
 button.contained:hover {
     /** Overlay Shadow **/
-    background-color: hsl(var(--primary-color-hs), 35%);
+    background-color: hsl(var(--primary-color-hs), var(--primary-color-light));
 }
+
 button.contained:active {
     /** Overlay Shadow **/
-    background-color: hsl(var(--primary-color-hs), 20%);
-}button.outlined {
-    /** Border **/
-    box-shadow: inset 0 0 0 0.1rem hsl(var(--primary-color-hs), 47%);
-    /** Remove background **/
-    background-color: hsla(var(--primary-color-hs), 47%, 0%);
+    background-color: hsl(var(--primary-color-hs), var(--primary-color-dark));
 }
+
+button.outlined {
+    /** Border **/
+    box-shadow: inset 0 0 0 0.1rem hsl(var(--primary-color-hs), var(--primary-color-base));
+    /** Remove background **/
+    background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-none));
+}
+
 button.outlined:hover {
     /** Overlay Shadow **/
-    background-color: hsla(var(--primary-color-hs), 47%, 50%);
+    background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-base));
 }
+
 button.outlined:active {
     /** Overlay Shadow **/
-    background-color: hsla(var(--primary-color-hs), 47%, 70%);
+    background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-light));
 }
+
 button.flat {
     /** Overlay Shadow **/
-    background-color: hsl(var(--background-color-hs), 90%);
+    background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-light));
 }
+
 button.flat:hover {
     /** Overlay Shadow **/
-    background-color: hsl(var(--background-color-hs), 80%);
+    background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
 }
+
 button.flat:active {
     /** Overlay Shadow **/
-    background-color: hsl(var(--background-color-hs), 50%);
+    background-color: hsl(var(--achromatic-color-hs), var(--achromatic-color-dark));
+}
+
+/** RadioButton **/
+div.radiogrouop label {
+    cursor: pointer;
+    vertical-align: middle;
+}
+
+div.radiogrouop label span {
+    vertical-align: middle;
+}
+
+input[type=radio] {
+    vertical-align: middle;
+    appearance: none;
+    border: max(2px, 0.15em) solid hsl(var(--achromatic-color-hs), var(--achromatic-color-darker));
+    border-radius: 50%;
+    width: 1.25em;
+    height: 1.25em;
+}
+
+input[type="radio"]:checked {
+    border: 0.4em solid hsl(var(--primary-color-hs), var(--primary-color-base));
+}
+
+input[type="radio"]:focus-visible {
+    outline-offset: max(2px, 0.1em);
+    outline: max(2px, 0.15em) solid hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-base));
+}
+
+input[type="radio"]:hover {
+    box-shadow: 0 0 0 max(4px, 0.2em) hsl(var(--achromatic-color-hs), var(--achromatic-color-light));
+}
+
+input[type="radio"]:disabled {
+    border: max(2px, 0.15em) solid hsl(var(--achromatic-color-hs), var(--achromatic-color-light));
+    box-shadow: none;
+    cursor: not-allowed;
+}
+input[type="radio"]:checked:disabled {
+    border: 0.4em solid hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
+}
+
+input[type="radio"]:disabled+span {
+    cursor: not-allowed;
 }
