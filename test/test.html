@@ -1,6 +1,6 @@
 <!DOCTYPE html
     PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en">
 
 <head>
     <title>Test page</title>
@@ -17,7 +17,9 @@
 
 <body>
     <h1>Test Page</h1>
-    <h2>Buttons</h2>
+
+    <h2>Components</h2>
+    <h3>Buttons</h3>
     <div>
         <button class="contained">ContainedButton</button>
         <button class="outlined">OutlinedButton</button>
@@ -26,7 +28,7 @@
         <button class="outlined" disabled>OutlinedButton</button>
         <button class="flat" disabled>FlatButton</button>
     </div>
-    <h2>Radiobutton</h2>
+    <h3>Radiobutton</h3>
     <div class="radiogroup">
         <label>
             <input type="radio" name="radiobutton" value="1" checked/>
@@ -45,7 +47,7 @@
             <span>RadioButton 4</span>
         </label>
     </div>
-    <h2>Checkbox</h2>
+    <h3>Checkbox</h3>
     <div class="checkboxgroup">
         <label>
             <input type="checkbox" name="checkbox" value="1" checked/>
@@ -65,21 +67,74 @@
         </label>
     </div>
     <div></div>
-    <h2>InputField</h2>
+    <h3>InputField</h3>
     <div>
         <input type="text" class="inputfield" placeholder="Text"/>
         <input type="password" class="inputfield" placeholder="Password"/>
         <input type="text" class="inputfield" placeholder="Disabled" disabled/>
     </div>
-    <h2>Slider</h2>
+    <h3>Slider</h3>
     <div>
         <input type="range" min="0" max="100"/>
         <input type="range" min="0" max="100" value="30" disabled/>
     </div>
-    <h2>IconButton</h2>
-    <div></div>
+    <h3>IconButton</h3>
+    <div>
+        <button class="icon">
+            <img src="album.svg" alt="Album"/>
+        </button>
+        <button class="icon">
+            <img src="anchor.svg" alt="Anchor"/>
+        </button>
+    </div>
 
-    
+    <h2>Typography</h2>
+    <h3>Display</h3>
+    <div class="layout sheet outlined">
+        <p class="text display large">Display Large</p>
+        <p class="text display medium">Display Medium</p>
+        <p class="text display small">Display Small</p>
+    </div>
+    <h3>Title</h3>
+    <div class="layout sheet outlined">
+        <p class="text title large">Title Large (H1)</p>
+        <p class="text title medium">Title Medium (H2)</p>
+        <p class="text title small">Title Small (H3)</p>
+    </div>
+    <h3>Body</h3>
+    <div class="layout sheet outlined">
+        <p class="text body large">Body Large</p>
+        <p class="text body medium">Body Medium</p>
+        <p class="text body small">Body Small</p>
+    </div>
+    <h3>Label</h3>
+    <div class="layout sheet outlined">
+        <p class="text label large">Label Large</p>
+        <p class="text label medium">Label Medium</p>
+        <p class="text label small">Label Small</p>
+    </div>
+
+    <h2>Layouts</h2>
+    <h3>Sheet</h3>
+    <div class="layout sheet colored">
+        <p class="text title medium">Colored</p>
+        <p class="text body medium">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec efficitur posuere dolor mollis vulputate. Fusce in justo gravida, maximus sem dapibus, ornare ex. Ut ac massa gravida, iaculis sem sit amet, gravida tellus. Maecenas dui risus, dignissim eu libero et, porta cursus lorem. Cras lorem erat, aliquet eget leo ut, faucibus elementum dui. Donec at fringilla erat. Vivamus dignissim ac tellus ut molestie. Nam auctor ante ut tortor faucibus pretium.</p>
+    </div>
+    <div class="layout sheet outlined">
+        <p class="text title medium">Outlined</p>
+        <p class="text body medium">Morbi ut magna eros. Nunc tempor ligula non leo tempor sodales iaculis efficitur quam. Integer condimentum, lorem sit amet dictum eleifend, augue velit dictum nisl, non imperdiet lorem massa eget lectus. Mauris eget auctor ante, eu vulputate ligula. Quisque vel ultrices nibh. Maecenas vitae semper turpis, vel luctus mauris. Nulla facilisi. Cras interdum leo eu odio lacinia suscipit. Sed scelerisque felis sem, sed viverra augue laoreet in. Etiam sagittis ipsum sit amet odio egestas elementum. In orci dui, dignissim sed rutrum et, viverra consequat risus. Integer nec erat pharetra, ultrices velit non, feugiat augue. Sed ultrices arcu leo, sit amet vulputate urna sollicitudin eget.</p>
+    </div>
+    <h3>Gridview</h3>
+    <div class="layout gridview">
+        <div class="layout item">Item A</div>
+        <div class="layout item">Item B</div>
+        <div class="layout item">Item C</div>
+        <div class="layout item">Item D</div>
+        <div class="layout item">Item E</div>
+        <div class="layout item">Item F</div>
+        <div class="layout item">Item G</div>
+        <div class="layout item">Item H</div>
+    </div>
 
     <!-- Load UI.js -->
     <script src="../ui.js" type="text/javascript"></script>

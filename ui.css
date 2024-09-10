@@ -303,3 +303,132 @@ input[type="range"]:active:not(:disabled)::-moz-range-thumb {
     border: max(4px, 0.2em) solid hsl(var(--primary-color-hs), var(--primary-color-dark));
     box-shadow: 0 0 0 max(4px, 0.2em) hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-base));
 }
+
+/* IconButton */
+button.icon {
+    aspect-ratio: 1;
+    text-align: center;
+    vertical-align: baseline;
+    padding: 8px;
+    /** Color **/
+    color: hsl(var(--primary-color-hs), var(--primary-color-base));
+    /** Remove background **/
+    background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-none));
+}
+
+button.icon:focus {
+    outline: none;
+}
+
+button.icon:disabled {
+    color: hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
+}
+
+button.icon:hover:not(:disabled) {
+    /** Overlay Shadow **/
+    background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-base));
+}
+
+button.icon:active:not(:disabled) {
+    /** Overlay Shadow **/
+    background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-light));
+}
+
+/** Text styles **/
+.text.display {
+    font-weight: 400;
+}
+.text.display.large {
+    font-size: 57pt;
+    line-height: 64pt;
+}
+.text.display.medium {
+    font-size: 45pt;
+    line-height: 52pt;
+}
+.text.display.small {
+    font-size: 36pt;
+    line-height: 44pt;
+}
+
+.text.title {
+    font-weight: 500;
+}
+.text.title.large, h1 {
+    font-weight: 400;
+    font-size: 22pt;
+    line-height: 28pt;
+}
+.text.title.medium, h2 {
+    font-size: 16pt;
+    line-height: 24pt;
+}
+.text.title.small, h3 {
+    font-size: 14pt;
+    line-height: 20pt;
+}
+
+.text.body {
+    font-weight: 400;
+}
+.text.body.large {
+    font-size: 16pt;
+    line-height: 24pt;
+}
+.text.body.medium {
+    font-size: 14pt;
+    line-height: 20pt;
+}
+.text.body.small {
+    font-size: 12pt;
+    line-height: 16pt;
+}
+
+.text.label {
+    font-weight: 500;
+}
+.text.label.large {
+    font-size: 14pt;
+    line-height: 20pt;
+}
+.text.label.medium {
+    font-size: 12pt;
+    line-height: 16pt;
+}
+.text.label.small {
+    font-size: 11pt;
+    line-height: 16pt;
+}
+
+/** Layouts **/
+div.layout {
+    padding: 0.5em 1em 0.5em 1em;
+}
+
+div.layout.sheet {
+    border-radius: 0;
+    margin: 1em 0 1em 0;
+}
+div.layout.sheet.outlined {
+    outline: solid 1px hsl(var(--achromatic-color-hs), var(--achromatic-color-lighter));
+}
+div.layout.sheet.colored {
+    background: hsl(var(--achromatic-color-hs), var(--achromatic-color-lighter));
+}
+
+div.layout.item {
+    display: block;
+}
+
+div.layout.gridview {
+    outline: solid 1px hsl(var(--achromatic-color-hs), var(--achromatic-color-lighter));
+    border-radius: 0;
+    display: grid;
+    row-gap: 2px;
+    column-gap: 2px;
+    align-items: stretch;
+    justify-items: stretch;
+    padding: 0;
+    /* Number of items */
+    grid-template-columns: repeat(auto-fit, minmax(10%, auto));
+}
