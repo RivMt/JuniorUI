@@ -303,7 +303,7 @@ input[type="range"]:active:not(:disabled)::-moz-range-thumb {
 }
 
 /* IconButton */
-button.icon {
+button.icon, a.icon {
     aspect-ratio: 1;
     text-align: center;
     vertical-align: baseline;
@@ -313,21 +313,29 @@ button.icon {
     /** Remove background **/
     background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--transparent-none));
 }
+a.icon {
+    display: inline-block;
+    line-height: 1em;
+}
+.icon > img {
+    margin: 0;
+    padding: 0;
+}
 
-button.icon:focus {
+button.icon:focus, a.icon:focus {
     outline: none;
 }
 
-button.icon:disabled {
+button.icon:disabled, a.icon:disabled {
     color: hsl(var(--achromatic-color-hs), var(--achromatic-color-base));
 }
 
-button.icon:hover:not(:disabled) {
+button.icon:hover:not(:disabled), a.icon:hover:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-base));
 }
 
-button.icon:active:not(:disabled) {
+button.icon:active:not(:disabled), a.icon:active:not(:disabled) {
     /** Overlay Shadow **/
     background-color: hsla(var(--primary-color-hs), var(--primary-color-base), var(--achromatic-color-light));
 }
